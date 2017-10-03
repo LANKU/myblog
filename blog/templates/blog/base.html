@@ -10,7 +10,13 @@
 </head>
 <body>
 <div class="page-header">
+    {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu">
+            <span class="glyphicon glyphicon-plus">Add</span>
+        </a>
+    {% endif %}
     <h1><a href="/">Lan0 Blog</a></h1>
+
 </div>
 <div class="content container">
     <div class="row">
